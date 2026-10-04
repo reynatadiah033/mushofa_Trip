@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mushofa Trip ID | Private Trip Pendakian Jawa Timur</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+#tentang,#fasilitas,#layanan,#galeri,#konten-promosi,#blog,#anggota,#faq,#kontak{scroll-margin-top:90px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}
+.blog-card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.07);transition:transform .25s ease}
+.blog-card:hover{transform:translateY(-5px)}
+.blog-icon{font-size:32px;margin-bottom:15px}.blog-card span{font-size:12px;font-weight:700;letter-spacing:1px}.blog-card h3{margin:10px 0}.blog-card p{line-height:1.7}
+.member-photo{width:120px;height:120px;object-fit:cover;border-radius:50%;display:block;margin:0 auto 18px;border:4px solid rgba(0,0,0,.06)}
+.member-card{text-align:center}
+.faq-list{max-width:850px;margin:35px auto 0}.faq-item{background:#fff;border-radius:14px;margin-bottom:14px;box-shadow:0 7px 25px rgba(0,0,0,.06);overflow:hidden}
+.faq-item summary{cursor:pointer;padding:20px 24px;font-weight:700;list-style:none;position:relative;padding-right:50px}.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:"+";position:absolute;right:22px;font-size:24px}.faq-item[open] summary:after{content:"−"}
+.faq-item p{padding:0 24px 22px;margin:0;line-height:1.7}
+@media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr}.member-photo{width:100px;height:100px}}
+
+/* ===== Blog: kartu bisa diklik + popup artikel ===== */
+.blog-card{cursor:pointer;display:flex;flex-direction:column;text-align:left}
+.blog-card:focus-visible{outline:3px solid #1c1c1c;outline-offset:3px}
+.blog-more{margin-top:auto;padding-top:14px;font-weight:700;font-size:14px}
+.blog-card:hover .blog-more{text-decoration:underline}
+.article-overlay{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
+.article-overlay.open{display:flex}
+.article-modal{background:#fff;color:#1c1c1c;width:100%;max-width:720px;max-height:88vh;overflow-y:auto;border-radius:20px;padding:36px 36px 32px;position:relative;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.article-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border:0;border-radius:50%;background:#f0f0f0;font-size:22px;line-height:1;cursor:pointer}
+.article-close:hover{background:#e0e0e0}
+.article-close:focus-visible{outline:3px solid #1c1c1c}
+.article-tag{font-size:12px;font-weight:700;letter-spacing:1px}
+.article-modal h3{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,32px);line-height:1.25;margin:10px 40px 18px 0}
+.article-body p{line-height:1.8;margin:0 0 14px}
+.article-body ul{line-height:1.8;padding-left:20px;margin:0 0 14px}
+.article-cta{display:inline-block;margin-top:10px;padding:12px 22px;border-radius:999px;background:#25D366;color:#fff;font-weight:700;text-decoration:none}
+body.no-scroll{overflow:hidden}
+@media(max-width:600px){.article-modal{padding:28px 22px 24px;max-height:92vh}}
+@media(prefers-reduced-motion:no-preference){.article-overlay.open .article-modal{animation:artIn .25s ease}@keyframes artIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+
+/* ===== Blog 2 artikel + gaya isi artikel panjang ===== */
+.blog-grid{grid-template-columns:repeat(2,1fr);max-width:920px;margin-left:auto;margin-right:auto}
+@media(max-width:700px){.blog-grid{grid-template-columns:1fr}}
+.article-body h4{font-size:18px;margin:26px 0 8px;line-height:1.35}
+.article-body small{color:#555;line-height:1.6;display:block}
+.article-table-wrap{overflow-x:auto;margin:0 0 10px}
+.article-table{border-collapse:collapse;width:100%;min-width:480px;font-size:14px}
+.article-table th,.article-table td{border:1px solid #e2e2e2;padding:9px 12px;text-align:left;vertical-align:top}
+.article-table th{background:#f5f5f5}
+</style>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="brand">
+
+                <img src="logotrip.jpeg" alt="Logo Mushofa Trip ID">
+
+                <div>
+                    <strong>Mushofa Trip ID</strong>
+                    <span>Private Trip & Pendakian</span>
+                </div>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="#home">Home</a>
+
+                <a href="#tentang">Tentang</a>
+
+                <a href="#fasilitas">Fasilitas</a>
+
+                <a href="#layanan">Layanan</a>
+
+                <a href="#galeri">Galeri</a>
+
+                <a href="#konten-promosi">Konten</a>
+                <a href="#blog">Blog</a>
+                <a href="#faq">FAQ</a>
+
+                <a href="#kontak">Kontak</a>
+
+            </nav>
+
+
+            <a
+                class="nav-button"
+                href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+                target="_blank"
+            >
+                Tanya Sekarang
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                 PRIVATE TRIP PENDAKIAN JAWA TIMUR
+            </span>
+
+            <!-- INLINE CSS -->
+            <h1 style="letter-spacing: -1px;">
+                Berangkat Sendiri,<br>
+                <span>Pulang Bawa Cerita.</span>
+            </h1>
+
+            <p>
+                Nikmati pengalaman mendaki gunung di Jawa Timur dengan
+                perjalanan yang lebih aman, nyaman, dan terencana.
+                Cocok untuk pemula, mahasiswa, maupun kamu yang ingin
+                menikmati alam tanpa ribet.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+                    target="_blank"
+                    class="btn-primary"
+                >
+                    💬 Konsultasi via WhatsApp
+                </a>
+
+                <a href="#fasilitas" class="btn-secondary">
+                    Lihat Fasilitas ↓
+                </a>
+
+            </div>
+
+
+            <div class="hero-info">
+
+                <div>
+                    <strong>Rp350K</strong>
+                    <span>Mulai dari</span>
+                </div>
+
+                <div>
+                    <strong>Jawa Timur</strong>
+                    <span>Destinasi Pendakian</span>
+                </div>
+
+                <div>
+                    <strong>Private</strong>
+                    <span>Trip Experience</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TENTANG ================= -->
+
+    <section class="about section" id="tentang">
+
+        <div class="section-heading">
+
+            <span>KENAPA MUSHОFA TRIP ID?</span>
+
+            <h2>
+                Mendaki Tanpa Harus<br>
+                <em>Repot Mengurus Semuanya.</em>
+            </h2>
+
+        </div>
+
+
+        <!-- INTERNAL CSS -->
+
+        <p class="about-description">
+            Mushofa Trip ID adalah jasa private trip pendakian gunung
+            di Jawa Timur yang dirancang untuk memberikan pengalaman
+            mendaki yang lebih nyaman, aman, dan menyenangkan.
+            Kami membantu menyiapkan kebutuhan perjalanan sehingga
+            kamu bisa lebih fokus menikmati perjalanan dan keindahan alam.
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">🥾</div>
+
+                <h3>Cocok Untuk Pemula</h3>
+
+                <p>
+                    Tidak perlu khawatir meskipun baru pertama kali
+                    melakukan pendakian.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🧭</div>
+
+                <h3>Guide Pribadi</h3>
+
+                <p>
+                    Kamu akan mendapatkan pendampingan selama perjalanan
+                    agar pendakian lebih terarah.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🎒</div>
+
+                <h3>Lebih Praktis</h3>
+
+                <p>
+                    Berbagai perlengkapan pendakian sudah disiapkan
+                    sehingga perjalanan menjadi lebih praktis.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">📸</div>
+
+                <h3>Dokumentasi</h3>
+
+                <p>
+                    Abadikan momen pendakian bersama dokumentasi
+                    menggunakan iPhone 11.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HARGA ================= -->
+
+    <section class="price-section">
+
+        <div class="price-card">
+
+            <div>
+
+                <span class="price-label">
+                    PRIVATE TRIP
+                </span>
+
+                <h2>
+                    Mulai dari
+                    <strong>Rp350.000</strong>
+                </h2>
+
+                <p>
+                    Dapatkan pengalaman pendakian yang lebih nyaman
+                    dengan berbagai fasilitas yang sudah kami siapkan.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+                target="_blank"
+                class="price-button"
+            >
+                Booking / Tanya Harga
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FASILITAS ================= -->
+
+    <section class="facilities section" id="fasilitas">
+
+        <div class="section-heading center">
+
+            <span>PRIVATE TRIP</span>
+
+            <h2>
+                Apa Saja yang<br>
+                <em>Kamu Dapatkan?</em>
+            </h2>
+
+        </div>
+
+
+        <div class="facility-grid">
+
+            <!-- INCLUDE -->
+
+            <div class="include-box">
+
+                <div class="box-heading">
+
+                    <div class="box-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>SUDAH TERMASUK</span>
+                        <h3>Include</h3>
+                    </div>
+
+                </div>
+
+
+                <ul class="check-list">
+
+                    <li>Simaksi + Parkir</li>
+
+                    <li>Guide pribadi</li>
+
+                    <li>Barang bawaan dibawakan</li>
+
+                    <li>
+                        Alat pendakian:
+                        Tracking Pole, Headlamp,
+                        Hydropack, Payung UV, Powerbank
+                    </li>
+
+                    <li>
+                        Alat masak:
+                        Kompor, Nesting, Gas
+                    </li>
+
+                    <li>P3K standar</li>
+
+                    <li>Makan</li>
+
+                    <li>Buah-buahan</li>
+
+                    <li>Roti</li>
+
+                    <li>
+                        Welcome drink:
+                        Teh hangat / Susu hangat / Kopi
+                    </li>
+
+                    <li>Jas hujan</li>
+
+                    <li>Kursi + Meja Lipat</li>
+
+                    <li>Footprint</li>
+
+                    <li>Dokumentasi (iPhone 11)</li>
+
+                    <li>Bonus stiker</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- EXCLUDE -->
+
+            <div class="exclude-box">
+
+                <div class="box-heading">
+
+                    <div class="box-icon">
+                        !
+                    </div>
+
+                    <div>
+                        <span>TIDAK TERMASUK</span>
+                        <h3>Exclude</h3>
+                    </div>
+
+                </div>
+
+
+                <ul class="cross-list">
+
+                    <li>
+                        Transportasi
+                        <small>(jika mepo BC)</small>
+                    </li>
+
+                    <li>Sepatu hiking</li>
+
+                    <li>Logistik pribadi</li>
+
+                    <li>Obat pribadi</li>
+
+                    <li>Barang pribadi</li>
+
+                    <li>Yang tidak tercantum dalam include</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= LAYANAN / PAKET PENDAKIAN ================= -->
+
+    <section class="services section" id="layanan">
+
+        <div class="section-heading center">
+            <span>PILIH DESTINASI</span>
+            <h2>
+                Layanan & Paket<br>
+                <em>Pendakian</em>
+            </h2>
+            <p>
+                Pilih gunung yang ingin kamu datangi. Klik nama gunung
+                untuk melihat pilihan paket Tektok dan Camp.
+            </p>
+        </div>
+
+        <div class="mountain-list">
+
+            <!-- GUNUNG PENANGGUNGAN -->
+            <details class="mountain-card">
+                <summary class="mountain-header">
+                    <img src="Penanggungan.jpeg" alt="Gunung Penanggungan">
+                    <div class="mountain-title">
+                        <span>DESTINASI PENDAKIAN</span>
+                        <h3>Gunung Penanggungan</h3>
+                        <p>Klik untuk melihat Paket Tektok & Camp</p>
+                    </div>
+                    <span class="mountain-arrow">⌄</span>
+                </summary>
+
+                <div class="package-area">
+                    <div class="package-group">
+                        <div class="package-group-title">
+                            <span>TEKTOK</span>
+                            <h4>Paket Tektok</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK A</span>
+                                <h5>Paket Tektok A</h5>
+                                <p class="package-price">Rp 400.000</p>
+                                <ul>
+                                    <li>Simaksi</li>
+                                    <li>Guide pribadi</li>
+                                    <li>p3k Standart</li>
+                                    <li>alat masak</li>
+                                    <li>Makan</li>
+                                    <li>Roti</li>
+                                    <li>Welcome drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Fasilitas sesuai kesepakatan</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20A%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK B</span>
+                                <h5>Paket Tektok B</h5>
+                                <p class="package-price">Rp 525.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20B%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK C</span>
+                                <h5>Paket Tektok C</h5>
+                                <p class="package-price">Rp 600.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Kursi lipat</li>
+                                    <li>Meja lipat</li>
+                                    <li>Footprint</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>Full Includean</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20C%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-group camp-group">
+                        <div class="package-group-title">
+                            <span>CAMP</span>
+                            <h4>Paket Camp</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">CAMP A</span>
+                                <h5>Paket Camp A</h5>
+                                <p class="package-price">Rp 1.100.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 2x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20A%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP B</span>
+                                <h5>Paket Camp B</h5>
+                                <p class="package-price">Rp 1.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 3x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20B%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP C</span>
+                                <h5>Paket Camp C</h5>
+                                <p class="package-price">Rp 2.250.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Fly sheet</li>
+                                    <li>Kasur Angin</li>
+                                    <li>Footprint</li>
+                                    <li>Makan Full</li>
+                                    <li>Buah-buahan</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Meja + Kursi llipat</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>Full Include</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20C%20Gunung%20Penanggungan">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- GUNUNG Buthak -->
+            <details class="mountain-card">
+                <summary class="mountain-header">
+                    <img src="Buthak.jpeg" alt="Gunung Buthak">
+                    <div class="mountain-title">
+                        <span>DESTINASI PENDAKIAN</span>
+                        <h3>Gunung Buthak</h3>
+                        <p>Klik untuk melihat Paket Tektok & Camp</p>
+                    </div>
+                    <span class="mountain-arrow">⌄</span>
+                </summary>
+
+                <div class="package-area">
+                    <div class="package-group">
+                        <div class="package-group-title">
+                            <span>TEKTOK</span>
+                            <h4>Paket Tektok</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK A</span>
+                                <h5>Paket Tektok A</h5>
+                                <p class="package-price">Rp 500.000</p>
+                                <ul>
+                                    <li>Simaksi</li>
+                                    <li>Guide pribadi</li>
+                                    <li>p3k Standart</li>
+                                    <li>alat masak</li>
+                                    <li>Makan</li>
+                                    <li>Roti</li>
+                                    <li>Welcome drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Fasilitas sesuai kesepakatan</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20A%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK B</span>
+                                <h5>Paket Tektok B</h5>
+                                <p class="package-price">Rp 650.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20B%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">TEKTOK C</span>
+                                <h5>Paket Tektok C</h5>
+                                <p class="package-price">Rp 850.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Kursi lipat</li>
+                                    <li>Meja lipat</li>
+                                    <li>Footprint</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>PP Ojek BC-Pos 1</li>
+                                    <li>Full Includean</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Tektok%20C%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-group camp-group">
+                        <div class="package-group-title">
+                            <span>CAMP</span>
+                            <h4>Paket Camp</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">CAMP A</span>
+                                <h5>Paket Camp A</h5>
+                                <p class="package-price">Rp 1.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 2x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20A%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP B</span>
+                                <h5>Paket Camp B</h5>
+                                <p class="package-price">Rp 2.000.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 3x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20B%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP C</span>
+                                <h5>Paket Camp C</h5>
+                                <p class="package-price">Rp 2.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Fly sheet</li>
+                                    <li>Kasur Angin</li>
+                                    <li>Footprint</li>
+                                    <li>Makan Full</li>
+                                    <li>Buah-buahan</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Meja + Kursi llipat</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>Full Include</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20C%20Gunung%20Buthak">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- GUNUNG Arjuno -->
+            <details class="mountain-card">
+                <summary class="mountain-header">
+                    <img src="Arjuno.jpeg" alt="Gunung Arjuno">
+                    <div class="mountain-title">
+                        <span>DESTINASI PENDAKIAN</span>
+                        <h3>Gunung Arjuno</h3>
+                        <p>Klik untuk melihat Paket Camp 2H1M & 3h2M</p>
+                    </div>
+                    <span class="mountain-arrow">⌄</span>
+                </summary>
+
+                <div class="package-area">
+                    <div class="package-group">
+                        <div class="package-group-title">
+                            <span>CAMP</span>
+                            <h4>Paket Camp 2H1M</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">CAMP A</span>
+                                <h5>Paket Camp A</h5>
+                                <p class="package-price">Rp 2.000.000</p>
+                                <ul>
+                                    <li>Simaksi</li>
+                                    <li>Guide pribadi</li>
+                                    <li>p3k Standart</li>
+                                    <li>alat masak</li>
+                                    <li>Makan</li>
+                                    <li>Roti</li>
+                                    <li>Welcome drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Fasilitas sesuai kesepakatan</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20A%202h1m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP B</span>
+                                <h5>Paket Camp B</h5>
+                                <p class="package-price">Rp 2.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20B%202h1m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP C</span>
+                                <h5>Paket Camp C</h5>
+                                <p class="package-price">Rp 3.350.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k standart</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Barang bawaan dibawakan</li>
+                                    <li>buah buahan</li>  
+                                    <li>Makan</li>
+                                    <li>Welcome drink</li>
+                                    <li>Kursi lipat</li>
+                                    <li>Meja lipat</li>
+                                    <li>Footprint</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>PP Ojek BC-Pos 1</li>
+                                    <li>Full Includean</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20C%202h1m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-group camp-group">
+                        <div class="package-group-title">
+                            <span>CAMP</span>
+                            <h4>Paket Camp 3H2M</h4>
+                        </div>
+
+                        <div class="package-grid">
+                            <div class="package-card">
+                                <span class="package-label">CAMP A</span>
+                                <h5>Paket Camp A</h5>
+                                <p class="package-price">Rp 2.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 2x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20A%203h2m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP B</span>
+                                <h5>Paket Camp B</h5>
+                                <p class="package-price">Rp 3.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Footprint</li>
+                                    <li>Makan 3x</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20B%203h2m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+
+                            <div class="package-card">
+                                <span class="package-label">CAMP C</span>
+                                <h5>Paket Camp C</h5>
+                                <p class="package-price">Rp 4.500.000</p>
+                                <ul>
+                                    <li>Simaksi + Parkir</li>
+                                    <li>Guide pribadi</li>
+                                    <li>Porter team</li>
+                                    <li>P3k Standart</li>
+                                    <li>Tenda</li>
+                                    <li>Lampu tenda</li>
+                                    <li>Alat pendakian</li>
+                                    <li>Alat masak</li>
+                                    <li>Fly sheet</li>
+                                    <li>Kasur Angin</li>
+                                    <li>Footprint</li>
+                                    <li>Makan Full</li>
+                                    <li>Buah-buahan</li>
+                                    <li>Welcome Drink</li>
+                                    <li>Jas hujan</li>
+                                    <li>Meja + Kursi llipat</li>
+                                    <li>Dokumentasi</li>
+                                    <li>Bonus stiker</li>
+                                    <li>Full Include</li>
+                                </ul>
+                                <a class="package-button" target="_blank"
+                                   href="https://wa.me/6281322351112?text=Halo%20Kak,%20saya%20tertarik%20Paket%20Camp%20C%203h2m%20Gunung%20Arjuno">
+                                    Pesan Paket
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+        </div><!-- /mountain-list -->
+
+    </section><!-- /layanan -->
+
+    <!-- ================= GALERI ================= -->
+
+    <section class="gallery section" id="galeri">
+
+        <div class="section-heading center">
+
+            <span>DOKUMENTASI PERJALANAN</span>
+
+            <h2>
+                Jejak Perjalanan,<br>
+                <em>Cerita yang Tak Terlupakan.</em>
+            </h2>
+
+            <p>
+                Beberapa momen perjalanan bersama Mushofa Trip ID.
+            </p>
+
+        </div>
+
+
+        <!-- 5 FOTO DOKUMENTASI -->
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item gallery-large">
+
+                <img
+                    src="dokumentasi1.jpeg"
+                    alt="Dokumentasi Pendakian Mushofa Trip ID"
+                >
+
+                <div class="gallery-caption">
+                    <span>Mushofa Trip ID</span>
+                    <strong>Mountain Experience</strong>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="dokumentasi2.jpeg"
+                    alt="Dokumentasi Pendakian"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="dokumentasi3.jpeg"
+                    alt="Dokumentasi Pendakian"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="dokumentasi4.jpeg"
+                    alt="Dokumentasi Pendakian"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="dokumentasi5.jpeg"
+                    alt="Dokumentasi Pendakian"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= KONTEN PROMOSI ================= -->
+
+    <section class="promo section" id="konten-promosi">
+
+        <div class="section-heading center">
+            <span>KONTEN PROMOSI</span>
+            <h2>
+                Lihat Keseruan<br>
+                <em>Mushofa Trip ID.</em>
+            </h2>
+            <p>
+                Saksikan konten perjalanan dan promosi terbaru kami melalui Instagram dan TikTok.
+            </p>
+        </div>
+
+        <div class="promo-grid">
+
+            <!-- GANTI URL DI BAWAH DENGAN URL POST/VIDEO INSTAGRAM MILIKMU -->
+            <div class="promo-card">
+                <div class="promo-title">
+                    <span>INSTAGRAM</span>
+                    <h3>Konten Instagram</h3>
+                </div>
+
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DdyDw5PTz0g/?stkn=ZjVkamdha3ZnaDhp"
+                    data-instgrm-version="14"
+                    style="background:#FFF; border:0; margin:0 auto; max-width:540px; min-width:280px; width:100%;">
+                </blockquote>
+            </div>
+
+            <!-- GANTI DATA-VIDEO-ID DENGAN ID VIDEO TIKTOK MILIKMU -->
+            <div class="promo-card">
+                <div class="promo-title">
+                    <span>TIKTOK</span>
+                    <h3>Konten TikTok</h3>
+                </div>
+
+                <div class="tiktok-player-wrap">
+    <iframe
+        class="tiktok-player"
+        src="https://www.tiktok.com/player/v1/7688400479855873287?controls=1&description=1&music_info=1"
+        title="Video TikTok Mushofa Trip ID"
+        loading="lazy"
+        allow="fullscreen"
+        allowfullscreen>
+    </iframe>
+
+    <a
+        class="tiktok-fallback"
+        href="https://www.tiktok.com/@mushofa_trip.id/video/7688400479855873287"
+        target="_blank"
+        rel="noopener noreferrer">
+        Buka video langsung di TikTok ↗
+    </a>
+</div>
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- ================= BLOG ================= -->
+<section class="blog section" id="blog">
+  <div class="section-heading center">
+    <span>BLOG MUSHОFA TRIP ID</span>
+    <h2>Cerita, Edukasi &<br><em>Informasi Pendakian.</em></h2>
+    <p>Fun fact seputar Gunung Arjuno dan rekomendasi gunung untuk pendaki pemula di Jawa Timur.</p>
+  </div>
+  <div class="blog-grid">
+    <article class="blog-card" data-article="0" role="button" tabindex="0" aria-haspopup="dialog"><div class="blog-icon">🏔️</div><span>FUN FACT</span><h3>12 Fun Fact Gunung Arjuno yang Jarang Dibahas</h3><p>Dari tinggi puncak, hulu Sungai Brantas, penambang belerang, sampai cerita Alas Lali Jiwo dan Pasar Dieng.</p><div class="blog-more">Baca selengkapnya →</div></article>
+    <article class="blog-card" data-article="1" role="button" tabindex="0" aria-haspopup="dialog"><div class="blog-icon">🥾</div><span>REKOMENDASI</span><h3>Rekomendasi Gunung untuk Pendaki Pemula di Jawa Timur</h3><p>Pundak, Penanggungan, Panderman, Kelud, dan Ijen: lengkap dengan waktu tempuh, catatan, dan tips memilih gunung pertama.</p><div class="blog-more">Baca selengkapnya →</div></article>
+  </div>
+
+
+<!-- ================= ANGGOTA KELOMPOK / BAGIAN BLOG ================= -->
+<div class="blog-members" id="anggota">
+  <div class="section-heading center">
+    <span>OUR TEAM</span>
+    <h2>Team<br><em>
+        </em>Pengembangan Website</h2>
+        <br> 
+    
+  <div class="members">
+    <div class="member-card"><img src="reynata.jpeg" alt="Foto Reynata Diah Ayu Meyhwa" class="member-photo">
+        <h3>Reynata Diah Ayu Meyhwa</h3><p></p></div>
+    <div class="member-card"><img src="Mushofa.jpeg" alt="Foto Muhammad Shoim Fadlillah" class="member-photo">
+        <h3>Muhammad Shoim Fadlillah</h3><p></p></div>
+    <div class="member-card"><img src="hilmi.jpeg" alt="Foto Maulana Hilmi Abdillah" class="member-photo">
+        <h3>Maulana Hilmi Abdillah</h3><p></p></div>
+    <div class="member-card"><img src="neisya.jpeg" alt="Foto Neisya Putri Yuan Nugroho" class="member-photo">
+        <h3>Neisya Putri Yuan Nugroho</h3><p></p></div>
+  </div>
+  </div>
+</div><!-- /blog-members -->
+
+</section>
+
+    
+
+
+<br><br><br>
+
+
+
+<!-- ================= FREQUENTLY ASKED QUESTIONS ================= -->
+<section class="faq section" id="faq">
+  <div class="section-heading center">
+    <span>FAQ</span>
+    <h2>Frequently Asked<br><em>Questions.</em></h2>
+    <p>Beberapa pertanyaan yang sering ditanyakan sebelum melakukan perjalanan bersama Mushofa Trip ID.</p>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Apakah bisa untuk pemula?</summary><p>Bisa. Paket dirancang agar pendakian lebih praktis dan terarah, terutama bagi pendaki yang baru memulai.</p></details>
+    <details class="faq-item"><summary>Apa perbedaan paket Tektok A, B, dan C?</summary><p>Setiap paket memiliki fasilitas dan layanan yang berbeda. Detailnya dapat dilihat pada bagian Layanan.</p></details>
+    <details class="faq-item"><summary>Apakah tersedia paket Camp?</summary><p>Tersedia pilihan Camp A, Camp B, dan Camp C sesuai kebutuhan perjalanan.</p></details>
+    <details class="faq-item"><summary>Bagaimana cara melakukan pemesanan?</summary><p>Klik tombol Pesan Paket atau tombol WhatsApp untuk konsultasi dan konfirmasi pemesanan.</p></details>
+    <details class="faq-item"><summary>Apakah harga paket sudah termasuk semua fasilitas?</summary><p>Tidak semua paket memiliki fasilitas yang sama. Detail fasilitas tersedia pada masing-masing paket.</p></details>
+    <details class="faq-item"><summary>Bagaimana jika ingin bertanya sebelum booking?</summary><p>Silakan hubungi Mushofa Trip ID melalui WhatsApp untuk berkonsultasi sebelum melakukan booking.</p></details>
+  </div>
+</section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta" id="kontak">
+
+        <div class="cta-content">
+
+            <span>SIAP MEMULAI PETUALANGAN?</span>
+
+            <h2>
+                Gunung Menunggu.<br>
+                <em>Sudah Siap Berangkat?</em>
+            </h2>
+
+            <p>
+                Konsultasikan rencana pendakianmu bersama kami.
+                Jangan ragu untuk bertanya terlebih dahulu.
+            </p>
+
+
+            <a
+                href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+                target="_blank"
+                class="cta-button"
+            >
+                💬 Chat WhatsApp Sekarang
+            </a>
+
+
+            <p class="phone">
+                CP: <strong>081322351112</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img src="logotrip.jpeg" alt="Logo Mushofa Trip ID">
+
+                <div>
+
+                    <h3>Mushofa Trip ID</h3>
+
+                    <p>
+                        Berangkat Sendiri, Pulang Bawa Cerita.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <a
+                    href="https://www.instagram.com/mushofa_trip.id"
+                    target="_blank"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@mushofa_trip.id"
+                    target="_blank"
+                >
+                    TikTok
+                </a>
+
+                <a
+                    href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Mushofa Trip ID.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    
+    <!-- POPUP ARTIKEL BLOG -->
+    <div class="article-overlay" id="articleOverlay" aria-hidden="true">
+        <div class="article-modal" role="dialog" aria-modal="true" aria-labelledby="articleTitle">
+            <button class="article-close" id="articleClose" aria-label="Tutup artikel">&times;</button>
+            <span class="article-tag" id="articleTag"></span>
+            <h3 id="articleTitle"></h3>
+            <div class="article-body" id="articleBody"></div>
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a
+        href="https://wa.me/6281322351112?text=Mau%20tanya-tanya%20seputar%20open%20trip%20kak"
+        target="_blank"
+        class="whatsapp-float"
+        title="Chat WhatsApp"
+    >
+        💬
+    </a>
+
+
+    <!-- Script embed Instagram & TikTok -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+
+
+    <!-- Script blog: buka artikel saat kartu diklik -->
+    <script>
+    (function () {
+        var WA = "https://wa.me/6281322351112?text=";
+        var articles = [
+            {
+                tag: "FUN FACT",
+                title: "12 Fun Fact Gunung Arjuno yang Jarang Dibahas",
+                body: [`
+<p>Gunung Arjuno sering masuk daftar impian pendaki Jawa Timur. Selain karena tinggi dan jalurnya yang menantang, gunung ini punya banyak cerita menarik, mulai dari data geografis, sejarah nama, penambang belerang, sampai kisah-kisah yang diwariskan turun-temurun. Berikut 12 fakta yang bisa jadi bekal sebelum kamu mendaki, atau sekadar bahan obrolan di tenda.</p>
+
+<h4>1. Tertinggi kedua di Jawa Timur</h4>
+<p>Puncak Arjuno berada di ketinggian 3.339 mdpl. Angka itu menjadikannya gunung tertinggi kedua di Jawa Timur setelah Semeru, dan tertinggi keempat di Pulau Jawa. Letaknya di perbatasan Kota Batu, Kabupaten Malang, dan Kabupaten Pasuruan.</p>
+
+<h4>2. Punya "kembaran": Welirang</h4>
+<p>Arjuno tidak berdiri sendirian. Ia bagian dari kompleks Arjuno-Welirang, dengan dua kerucut utama: Arjuno (3.339 mdpl) dan Welirang (3.156 mdpl). Karena berdampingan, keduanya sering disebut sebagai "gunung kembar", dan di jalur Tretes pendaki bisa mendaki Welirang sekaligus Arjuno dalam satu perjalanan.</p>
+
+<h4>3. Namanya dari tokoh pewayangan</h4>
+<p>Nama Arjuno diambil dari Arjuna, ksatria dalam wiracarita Mahabharata dan tokoh favorit dalam pewayangan Jawa. Ada pula legenda bahwa Arjuna bertapa di kawasan ini. Dalam cerita itu, para dewa sampai harus mengutus Batara Narada untuk membangunkannya dari pertapaan.</p>
+
+<h4>4. Puncaknya punya nama sendiri: Ogal-Agil</h4>
+<p>Puncak tertinggi Arjuno dikenal dengan nama Ogal-Agil. Nama yang unik ini sering muncul di cerita dan catatan perjalanan pendaki, jadi kalau mendengarnya, itu maksudnya puncak Arjuno.</p>
+
+<h4>5. Gunung api yang sedang "istirahat"</h4>
+<p>Arjuno adalah gunung api berbentuk kerucut (stratovolcano) yang saat ini berstatus istirahat. Erupsinya tercatat pada tahun 1950 dan 1952, dan 1952 disebut sebagai erupsi terakhir. Di sekitar kawasannya masih ada area fumarol, yaitu celah yang mengeluarkan gas belerang, misalnya di Welirang dan Kembar II.</p>
+
+<h4>6. Hulu Sungai Brantas ada di sini</h4>
+<p>Kawasan Arjuno-Welirang menjadi hulu Sungai Brantas, tepatnya di Sumber Brantas, Kota Batu. Brantas adalah salah satu sungai terpanjang di Jawa Timur yang mengalir melewati banyak kota. Jadi, air yang menghidupi banyak daerah di bawahnya berawal dari lereng gunung ini.</p>
+
+<h4>7. Ada penambang belerang di lerengnya</h4>
+<p>Karena cadangan belerangnya, kawasan Welirang sejak lama menjadi tempat para penambang bekerja. Di jalur Tretes, pendaki bisa berpapasan dengan penambang yang membawa hasil tambang turun dari atas. Jalurnya cukup berat, jadi pendaki biasanya memberi jalan dan menyapa mereka dengan sopan.</p>
+
+<h4>8. Empat jalur pendakian dengan karakter berbeda</h4>
+<ul>
+<li><strong>Tretes (Pasuruan):</strong> paling populer, jalurnya berbatu dan terus menanjak. Basecamp-nya sekitar 1.000 mdpl, dengan pos Pet Bocor, Kop-kopan, Pondokan, dan Lembah Kidang. Waktu tempuh ke puncak sering sekitar 12 jam.</li>
+<li><strong>Lawang (Malang):</strong> melewati kebun teh dan perbukitan, dengan pos Alang-alang, Lincing, Mahapena, dan Gombes. Biasanya ditempuh dengan bermalam.</li>
+<li><strong>Purwosari:</strong> jalur lain dari sisi Malang yang juga bertemu di jalur menuju puncak.</li>
+<li><strong>Batu / Sumber Brantas:</strong> melewati Watu Gede, Lembah Kembar, dan Lapangan Kotak. Cocok untuk yang sudah paham rute.</li>
+</ul>
+<p>Semua jalur akhirnya bertemu di dataran luas dekat puncak yang dikenal sebagai Pasar Dieng, lalu pendaki menapaki anak tangga batu kecil menuju puncak.</p>
+
+<h4>9. Ada hutan bernama "Lupa Jiwa"</h4>
+<p>Alas Lali Jiwo adalah hutan pinus yang dilewati pendaki sebelum mencapai area puncak. Secara harfiah artinya "hutan lupa jiwa" atau "hutan lupa diri". Masyarakat sekitar punya banyak cerita tentang pendaki yang tersesat atau linglung di sini. Konon, orang yang berniat buruk akan lebih mudah kehilangan arah.</p>
+<p>Menariknya, ada versi sejarah yang berbeda. Menurut penelusuran yang dikutip sebuah media, nama "Lali Djiwo" awalnya bukan nama hutan, melainkan nama pondok persinggahan yang dinamai seorang berkebangsaan Skotlandia. Artinya kira-kira "jiwa yang terlupakan", karena lokasinya terpencil. Seiring waktu, hutan di sekitarnya ikut dipanggil dengan nama itu.</p>
+
+<h4>10. Pasar Dieng alias Pasar Setan</h4>
+<p>Dataran luas dengan ketinggian hampir sama dengan puncak ini terkenal dengan sebutan Pasar Dieng atau Pasar Setan. Di sana terdapat beberapa makam. Menurut cerita, pada malam tertentu terdengar suara ramai seperti pasar, padahal siang harinya hanya tanah lapang. Ada kisah populer tentang pendaki yang membeli jaket di "pasar" itu, lalu menemukan uang kembaliannya berubah menjadi daun keesokan paginya.</p>
+
+<h4>11. Suara gamelan "ngunduh mantu"</h4>
+<p>Di Arjuno-Welirang, pendaki dan penambang kadang menceritakan suara gamelan seperti pesta pernikahan Jawa, yang disebut ngunduh mantu. Kepercayaan setempat menyarankan agar pendaki tidak memaksakan diri melanjutkan perjalanan ketika mendengarnya. Kisah ini juga turun-temurun diceritakan di gunung-gunung lain di Jawa.</p>
+
+<h4>12. Menyimpan situs dan cerita sejarah</h4>
+<p>Di kawasan Arjuno terdapat situs-situs yang dikaitkan dengan sejarah dan pewayangan, seperti Candi Sepilar dan Goa Antaboga. Banyak cerita menyebut kawasan ini punya hubungan dengan kerajaan-kerajaan lama seperti Singosari dan Majapahit. Karena dianggap sakral oleh sebagian masyarakat, pendaki diharapkan menjaga sikap dan ucapan selama di sana.</p>
+
+<h4>Catatan penting untuk pendaki</h4>
+<p>Kisah mistis di atas adalah kepercayaan dan cerita rakyat, bukan fakta ilmiah. Ada penjelasan yang lebih masuk akal mengapa pendaki bisa tersesat di Alas Lali Jiwo: hutan pinusnya rapat, jalurnya bercabang, kabut mudah turun, dan tubuh yang lelah membuat konsentrasi menurun. Karena itu:</p>
+<ul>
+<li>Jangan memisahkan diri dari rombongan atau guide.</li>
+<li>Gunakan peta atau GPS offline sebagai cadangan.</li>
+<li>Kalau ragu dengan jalur, berhenti dan cek ulang, jangan menebak.</li>
+<li>Beristirahat cukup dan jaga stamina sebelum masuk area hutan.</li>
+<li>Jaga sikap, ucapan, dan kebersihan. Bawa sampahmu kembali turun.</li>
+</ul>
+<p>Mendaki Arjuno butuh persiapan fisik yang baik. Kalau kamu ingin mencobanya dengan pendampingan, Mushofa Trip ID melayani paket Camp 2H1M dan 3H2M untuk Gunung Arjuno.</p>
+<p><small>Sumber rujukan: TelusuRI, IDN Times, Manusia Lembah, Malang Times, Katadata, Peakery, Muncak.id, dan Linkar Sosial. Kondisi jalur, aturan, dan status gunung bisa berubah, jadi selalu cek informasi terbaru sebelum berangkat.</small></p>
+<a class="article-cta" target="_blank" href="${WA}Halo%20Kak,%20saya%20tertarik%20pendakian%20Gunung%20Arjuno">Tanya Paket Gunung Arjuno</a>
+`]
+            },
+            {
+                tag: "REKOMENDASI",
+                title: "Rekomendasi Gunung untuk Pendaki Pemula di Jawa Timur",
+                body: [`
+<p>Mau mulai mendaki tapi bingung memilih gunung? Jawa Timur punya banyak pilihan untuk pemula. Kuncinya bukan langsung ke gunung yang paling terkenal, tapi memilih yang sesuai dengan kondisi fisik, waktu, dan pengalamanmu. Berikut panduan lengkap beserta tips memilihnya.</p>
+
+<h4>Seperti apa gunung yang cocok untuk pemula?</h4>
+<p>Tidak ada aturan baku, tapi umumnya gunung untuk pemula punya ciri berikut:</p>
+<ul>
+<li><strong>Ketinggian relatif rendah.</strong> Banyak panduan menyarankan memulai dari gunung di bawah sekitar 2.000 mdpl.</li>
+<li><strong>Waktu tempuh singkat.</strong> Bisa dilakukan tektok (naik-turun dalam sehari) tanpa bermalam.</li>
+<li><strong>Jalur jelas dan akses mudah.</strong> Basecamp mudah dijangkau, jalurnya tidak membingungkan.</li>
+<li><strong>Tidak terlalu teknis.</strong> Tanpa bagian yang memerlukan keahlian memanjat.</li>
+</ul>
+
+<h4>1. Gunung Pundak (1.585 mdpl)</h4>
+<p>Gunung Pundak ada di Dusun Claket, Kecamatan Pacet, Kabupaten Mojokerto, dan merupakan bagian "bahu" dari Welirang. Medannya ringan dan tidak terlalu curam, dengan waktu tempuh sekitar 1,5 sampai 2 jam menuju puncak. Karena itu gunung ini sering direkomendasikan untuk yang baru mencoba, bahkan bisa untuk mendaki bersama keluarga.</p>
+<p><strong>Daya tarik:</strong> dari puncaknya kamu bisa melihat Welirang, dengan bonus pemandangan Penanggungan dari titik yang sama.</p>
+<p><strong>Cocok untuk:</strong> pendakian pertama, yang waktunya terbatas, atau yang ingin menguji stamina dulu.</p>
+
+<h4>2. Gunung Penanggungan (1.653 mdpl)</h4>
+<p>Penanggungan berada di perbatasan Mojokerto dan Pasuruan, dengan puncak bernama Pawitra. Ada beberapa jalur, antara lain Tamiajeng, Jolotundo, Wonosunyo, Betro, Kedungudi, dan Ngoro. Waktu ke puncak sekitar 2 sampai 3 jam tergantung jalur dan kondisi pendaki. Gunung ini juga dijuluki "mini Mahameru" dan menyimpan banyak situs sejarah, seperti candi dan teras batu kuno di sepanjang jalur.</p>
+<p><strong>Daya tarik:</strong> dari puncak terlihat Arjuno dan Welirang yang berdampingan, plus nuansa wisata sejarah.</p>
+<p><strong>Catatan jujur:</strong> banyak yang menyebutnya cocok untuk pemula, tapi sebagian pendaki berpendapat tidak seringan itu. Ada bagian jalur yang terjal, dan di jalurnya tidak ada sumber air, jadi bawa air minum yang cukup. Sebaiknya jangan dilakukan sendirian tanpa persiapan, dan akan lebih nyaman kalau didampingi guide.</p>
+<p><strong>Cocok untuk:</strong> pemula yang sudah rutin olahraga ringan dan siap dengan tanjakan yang lumayan menguras tenaga.</p>
+
+<h4>3. Gunung Panderman (2.045 mdpl)</h4>
+<p>Panderman terletak di Batu, Jawa Timur. Jalur pendakiannya dikenal cukup jelas dan medannya tidak terlalu curam, sehingga sering dipilih pemula yang ingin merasakan pendakian dengan pemandangan Kota Batu dan sekitarnya.</p>
+<p><strong>Cocok untuk:</strong> pemula yang sudah pernah mencoba gunung yang lebih rendah dan ingin naik level.</p>
+
+<h4>4. Gunung Kelud (1.731 mdpl)</h4>
+<p>Kelud berada di perbatasan Kediri dan Blitar. Salah satu jalur yang sering direkomendasikan untuk pemula adalah via Tulungrejo, Blitar, dengan waktu tempuh sekitar 4 jam. Medannya tidak terlalu sulit, dan pengelola menyediakan berbagai fasilitas wisata.</p>
+<p><strong>Catatan:</strong> Kelud adalah gunung api aktif yang erupsi pada 2014. Selalu cek status dan aturan terbaru dari pengelola sebelum berangkat.</p>
+<p><strong>Cocok untuk:</strong> yang ingin pemandangan kawah dan tebing dengan akses yang relatif mudah.</p>
+
+<h4>5. Kawah Ijen (Banyuwangi - Bondowoso)</h4>
+<p>Ijen sangat populer di kalangan pemula dan wisatawan. Waktu tempuh menuju kawah sekitar 2 sampai 4 jam, dengan fenomena api biru (blue fire) yang langka dan danau kawah berwarna toska. Karena berada di kawasan kawah, perhatikan gas belerang dan ikuti arahan petugas setempat.</p>
+<p><strong>Cocok untuk:</strong> yang ingin pengalaman berbeda dan tidak keberatan berangkat dini hari.</p>
+
+<h4>Bonus: Gunung Bromo</h4>
+<p>Bromo di kawasan Taman Nasional Bromo Tengger Semeru lebih tepat disebut destinasi wisata gunung dibanding pendakian. Jalurnya mudah diakses dan tanpa tanjakan ekstrem, jadi bisa jadi pengalaman pertama untuk menikmati suasana gunung.</p>
+
+<h4>Perbandingan singkat</h4>
+<div class="article-table-wrap"><table class="article-table">
+<thead><tr><th>Gunung</th><th>Lokasi</th><th>Waktu ke puncak</th><th>Catatan</th></tr></thead>
+<tbody>
+<tr><td>Pundak (1.585 mdpl)</td><td>Mojokerto</td><td>±1,5-2 jam</td><td>Paling ringan</td></tr>
+<tr><td>Penanggungan (1.653 mdpl)</td><td>Mojokerto - Pasuruan</td><td>±2-3 jam</td><td>Tanjakan terjal, tanpa sumber air</td></tr>
+<tr><td>Kelud (1.731 mdpl)</td><td>Kediri - Blitar</td><td>±4 jam (via Tulungrejo)</td><td>Gunung api aktif</td></tr>
+<tr><td>Panderman (2.045 mdpl)</td><td>Batu</td><td>Cukup singkat</td><td>Jalur jelas</td></tr>
+<tr><td>Ijen</td><td>Banyuwangi - Bondowoso</td><td>±2-4 jam</td><td>Blue fire, gas belerang</td></tr>
+</tbody></table></div>
+<p><small>Estimasi waktu bisa berbeda tergantung kecepatan, jalur, dan kondisi cuaca.</small></p>
+
+<h4>Tips memilih gunung pertamamu</h4>
+<ul>
+<li><strong>Jujur pada kondisi fisik.</strong> Latihan jalan kaki atau jogging ringan beberapa minggu sebelumnya sangat membantu.</li>
+<li><strong>Naik bertahap.</strong> Mulai dari gunung ringan seperti Pundak, lalu naik ke Penanggungan atau Panderman, baru pertimbangkan gunung yang lebih tinggi seperti Arjuno.</li>
+<li><strong>Perhatikan musim.</strong> Jalur lebih licin di musim hujan, jadi siapkan jas hujan dan sepatu yang gripnya baik.</li>
+<li><strong>Bawa air yang cukup.</strong> Tidak semua jalur punya sumber air.</li>
+<li><strong>Cek aturan.</strong> Pastikan simaksi atau tiket, kuota, dan status gunung sebelum berangkat.</li>
+<li><strong>Jangan berangkat sendirian.</strong> Mendaki bersama teman berpengalaman atau guide jauh lebih aman.</li>
+<li><strong>Utamakan keselamatan.</strong> Kalau cuaca memburuk atau tubuh tidak fit, turun lebih dulu. Puncak bukan satu-satunya tujuan.</li>
+</ul>
+
+<h4>Ingin mulai dengan pendampingan?</h4>
+<p>Kalau kamu ragu mulai dari mana, Mushofa Trip ID menyediakan paket Tektok dan Camp dengan guide pribadi untuk Gunung Penanggungan dan Gunung Buthak. Kamu bisa konsultasi dulu soal kondisi fisik dan pengalamanmu sebelum memilih paket.</p>
+<p><small>Sumber rujukan: JawaPos, detik Jatim, IDN Times Jatim, Superlive, Radar Jember, Malang Pagi, dan Tentang Outdoor. Jalur dan kondisi gunung bisa berubah, jadi cek informasi terbaru sebelum berangkat.</small></p>
+<a class="article-cta" target="_blank" href="${WA}Halo%20Kak,%20saya%20pemula%20dan%20mau%20konsultasi%20pilih%20gunung">Konsultasi Pilih Gunung</a>
+`]
+            }
+        ];
+
+        var overlay = document.getElementById("articleOverlay");
+        var closeBtn = document.getElementById("articleClose");
+        var tagEl = document.getElementById("articleTag");
+        var titleEl = document.getElementById("articleTitle");
+        var bodyEl = document.getElementById("articleBody");
+        var lastFocus = null;
+
+        function openArticle(i) {
+            var a = articles[i];
+            if (!a) return;
+            lastFocus = document.activeElement;
+            tagEl.textContent = a.tag;
+            titleEl.textContent = a.title;
+            bodyEl.innerHTML = a.body.join("");
+            overlay.classList.add("open");
+            overlay.setAttribute("aria-hidden", "false");
+            document.body.classList.add("no-scroll");
+            overlay.querySelector(".article-modal").scrollTop = 0;
+            closeBtn.focus();
+        }
+
+        function closeArticle() {
+            overlay.classList.remove("open");
+            overlay.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("no-scroll");
+            if (lastFocus) lastFocus.focus();
+        }
+
+        document.querySelectorAll(".blog-card").forEach(function (card) {
+            card.addEventListener("click", function () {
+                openArticle(parseInt(card.getAttribute("data-article"), 10));
+            });
+            card.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openArticle(parseInt(card.getAttribute("data-article"), 10));
+                }
+            });
+        });
+
+        closeBtn.addEventListener("click", closeArticle);
+        overlay.addEventListener("click", function (e) {
+            if (e.target === overlay) closeArticle();
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && overlay.classList.contains("open")) closeArticle();
+        });
+    })();
+    </script>
+
+</body>
+</html>
+
